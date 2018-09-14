@@ -1,5 +1,5 @@
 # CryptoSearch
-Projeto de teste desenvolvido para a empresa SQUAD onde os dados de criptomoedas sao baixados por uma api livre, eles sao mostrados na tela de acordo com o nome digitado na busca.
+Projeto de teste onde os dados de criptomoedas sao baixados por uma api livre, e sao mostrados na tela de acordo com o nome digitado na busca.
 
 ## Ambiente de teste
 
