@@ -6,7 +6,7 @@ injectGlobal`
     padding: 0;
     font-family: 'Roboto', sans-serif;
   }
-  h1{
+  h1,h3{
     margin:0;
   }
   .wrapAll{

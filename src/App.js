@@ -32,8 +32,7 @@ export default class App extends Component {
     return (
       <div className="wrapAll">
         {
-          isLoading ? 
-          <Loader color="#303f9f" title="Carregando..."/> 
+          isLoading ? <Loader color="#303f9f" title="Carregando..."/> 
           : 
           <Search 
             cryptos={cryptos}

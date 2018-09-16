@@ -11,7 +11,7 @@ const Cryptos = (props) => {
   
   return (
     <Fragment>
-    { 
+    { filteredSearch.length >= 1 ?
       filteredSearch.map(crypto =>
         <Grid item xs={6} lg={3} sm={4} key={crypto.id}>
           <Paper className="cryptoItem">
@@ -19,7 +19,10 @@ const Cryptos = (props) => {
             <span className="cryptoPrice">${crypto.price_usd}</span>
           </Paper>
         </Grid>
-      )
+      ) :
+      <Grid item xs={12}>
+        <h3>Nenhum resultado encontrado.</h3>
+      </Grid>
     }
     </Fragment>
   )
