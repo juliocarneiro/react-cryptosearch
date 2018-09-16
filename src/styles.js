@@ -6,6 +6,9 @@ injectGlobal`
     padding: 0;
     font-family: 'Roboto', sans-serif;
   }
+  h1{
+    margin:0;
+  }
   .wrapAll{
     max-width:800px;
     margin:0 auto;
@@ -14,7 +17,7 @@ injectGlobal`
   }
   .searchIcon{
     position: absolute;
-    top: 35px;
+    top: 45px;
     right: 18px;
     color:#303f9f;
   }

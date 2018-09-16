@@ -1,6 +1,5 @@
-import React, {Component} from 'react';
-import axios from 'axios';
-import PropTypes from 'prop-types';
+import React, {Component} from 'react'
+import axios from 'axios'
 
 import './styles.js'
 
@@ -11,6 +10,7 @@ export default class App extends Component {
   state = {
     cryptos: [],
     isLoading:true,
+    search:''
   }
 
   componentDidMount() {
@@ -23,17 +23,25 @@ export default class App extends Component {
     });
   }
 
+  searchHandler(event){
+    this.setState({ search: event.target.value })
+  }
+
   render() {
     const {cryptos, isLoading} = this.state
     return (
       <div className="wrapAll">
-        {isLoading ? <Loader color="#303f9f" title="Carregando..."/> : <Search cryptos={cryptos} />}
+        {
+          isLoading ? 
+          <Loader color="#303f9f" title="Carregando..."/> 
+          : 
+          <Search 
+            cryptos={cryptos}
+            searchHandler={this.searchHandler.bind(this)}
+            search={this.state.search}
+          />
+        }
       </div>
     )
   }
 }
-
-App.Proptypes = {
-  cryptos: PropTypes.array,
-  isLoading:PropTypes.bool
-}  
